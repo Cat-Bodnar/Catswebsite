@@ -1,9 +1,9 @@
 top_template = open('templates/top.html').read()
 bottom_template = open('templates/bottom.html').read()
 
-content = open('contents/bio.html').read ()
-bio_html = top_template + content + bottom_template
-open('contents/bio.html','w+').write(bio_html)
+content = open('contents/index.html').read ()
+index_html = top_template + content + bottom_template
+open('contents/index.html','w+').write(index_html)
 
 content = open('contents/contact.html').read()
 contact_html = top_template + content + bottom_template
