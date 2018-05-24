@@ -1,4 +1,4 @@
-cat templates/top.html content/bio.html templates/bottom.html > docs/bio.html 
+cat templates/top.html content/index.html templates/bottom.html > docs/index.html 
 
 
 
