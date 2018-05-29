@@ -1,0 +1,17 @@
+pages = [
+    {
+        'filename': 'content/index.html',
+        'title':'Bio',
+    },
+    {
+        'filename': 'content/blog.html',
+        'title': 'My Blog',
+    },
+    {
+        'filename': 'content/contact.html',
+        'title': 'Contact Me',
+    }
+]
+
+    
+     
