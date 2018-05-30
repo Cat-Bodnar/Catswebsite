@@ -1,6 +1,6 @@
 def main():
-    
-    pages = [
+   
+   pages = [
     {
         'filename': 'content/index.html',
         'title':'Bio',
