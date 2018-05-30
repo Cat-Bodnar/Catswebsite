@@ -1,26 +1,52 @@
-
-
 def main():
     
-    top = open('templates/top.html').read()
-    bottom = open('templates/bottom.html').read()
+    pages = [
+    {
+        'filename': 'content/index.html',
+        'title':'Bio',
+    },
+    {
+        'filename': 'content/blog.html',
+        'title': 'My Blog',
+    },
+    {
+        'filename': 'content/contact.html',
+        'title': 'Contact Me',
+    }
+]
+
+    for x in pages: 
+        
     
-    content = open('content/index.html').read ()
-    index_html = top + content + bottom
-    open('docs/index.html','w+').write(index_html)
+        top = open('templates/top.html').read()
+        bottom = open('templates/bottom.html').read()
+    
+        content = open('content/index.html').read ()
+        index_html = top + content + bottom
+        open('docs/index.html','w+').write(index_html)
 
-    content = open('content/contact.html').read()
-    contact_html = top + content + bottom
-    open('docs/contact.html', 'w+').write(contact_html)
+        content = open('content/contact.html').read()
+        contact_html = top + content + bottom
+        open('docs/contact.html', 'w+').write(contact_html)
 
-    content = open('content/blog.html').read()
-    blog_html = top + content + bottom
-    open ('docs/blog.html','w+').write(blog_html)
-
+        content = open('content/blog.html').read()
+        blog_html = top + content + bottom
+        open ('docs/blog.html','w+').write(blog_html)
     
     
-
-
-
 if __name__=='__main__':
     main()    
+    
+    
+template = open('base.html').read()
+
+index_content = open('content/index.html').read()
+
+finished_index_page = template.replace('{{content}}', index_content)
+open('docs/index.html', 'w+').write(finished_index_page)
+
+finished_blog_page = template.replace('{{content}}', blog_content)
+open('docs/blog.html', 'w+').write(finished_blog_page)
+
+finished_contact_page = template.replace('{{content}}', contact_content)
+open('docs/contact.html', 'w+').write(finished_contact_page)
