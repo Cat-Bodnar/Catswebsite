@@ -3,34 +3,45 @@ def main():
         pages = [
             {
                 'filename': 'content/index.html',
+                'output': 'docs/index.html',
                 'title':'Bio',
             },
             {
                 'filename': 'content/blog.html',
-                'title': 'My Blog',
+                'output': 'docs/blog.html',
+                'title': 'My_Blog',
             },
             {
                 'filename': 'content/contact.html',
-                'title': 'Contact Me',
+                'output': 'docs/contact.html',
+                'title': 'Contact_Me',
             }
         ]
     
         for page in pages:
         
-            top = open('templates/top.html').read()
-            bottom = open('templates/bottom.html').read()
-    
-            content = open('content/index.html').read ()
-            index_html = top + content + bottom
-            open('docs/index.html','w+').write(index_html)
-
-            content = open('content/contact.html').read()
-            contact_html = top + content + bottom
-            open('docs/contact.html', 'w+').write(contact_html)
-
-            content = open('content/blog.html').read()
-            blog_html = top + content + bottom
-            open ('docs/blog.html','w+').write(blog_html)
+            template = open('templates/base.html').read()
+            
+            #index_content = open('content.index.html').read()
+            #finished_index_page = template.replace('{{content}}', index_content)
+            #open('docs/index.html', 'w+').write(finished_index_page)
+            
+            filename = page['filename']
+            title = page['title']
+            output = page['output']
+            
+            content = open(filename).read()
+            template = template.replace('{{content}}', content)
+            template = template.replace('{{title}}', title)
+            
+            open(output, 'w+').write(template)
+            #print(blog_content)
+            
+            
+#           contact_content = open('content/contact.html').read()
+#           finished_contact_page = template.replace('{{content}}', contact_content)
+#           open('docs/contact.html', 'w+').write(finished_contact_page)
+            
 
 if __name__=='__main__':
     main()    
