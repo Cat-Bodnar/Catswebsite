@@ -9,12 +9,12 @@ def main():
             {
                 'filename': 'content/blog.html',
                 'output': 'docs/blog.html',
-                'title': 'My_Blog',
+                'title': 'My Blog',
             },
             {
                 'filename': 'content/contact.html',
                 'output': 'docs/contact.html',
-                'title': 'Contact_Me',
+                'title': 'Contact Me',
             }
         ]
     
