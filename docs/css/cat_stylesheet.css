@@ -27,7 +27,7 @@
    
    .site-heading .site-heading-lower {
   font-size: 2rem;
-  font-weight: 100;
+  font-weight: 300;
   line-height: 4rem;
   color: #FFD8EB;
   }
@@ -42,6 +42,16 @@
   #mainNav {
   background-color: #6E0036;
   font-family: 'Lato', sans-serif;
+    .navbar-nav {
+      .nav-item  {
+        .nav-link  {
+         font-size: 2rem;
+          &:hover {
+            color: #20c997;
+            }
+           }
+         }
+      }
   }
   
   .img-fluid 
