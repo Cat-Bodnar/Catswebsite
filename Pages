@@ -15,4 +15,19 @@ pages = [
 
 for x in pages:
       
-     
+  
+ pages.append({
+        'filename': 'content/index.html',
+        'output': 'docs/index.html',
+        'title':'Bio',
+    })
+    pages.append({
+        'filename': 'content/blog.html',
+        'output': 'docs/blog.html',
+        'title': 'My Blog',
+    })
+    pages.append({
+    'filename': 'content/contact.html',
+    'output': 'docs/contact.html',
+    'title': 'Contact Me',
+    })   
